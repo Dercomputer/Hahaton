@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webcrumbs Plugin</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+      
+      @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+      
+      @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+      
+      @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+      
+      /*! tailwindcss v3.4.11 | MIT License | https://tailwindcss.com*/
+      *,
+      :after,
+      :before {
+        border: 0 solid #e5e7eb;
+        box-sizing: border-box;
+      }
+      :after,
+      :before {
+        --tw-content: "";
+      }
+      :host,
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        font-family:
+          Open Sans,
+          ui-sans-serif,
+          system-ui,
+          sans-serif,
+          Apple Color Emoji,
+          Segoe UI Emoji,
+          Segoe UI Symbol,
+          Noto Color Emoji;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        line-height: inherit;
+        margin: 0;
+      }
+      hr {
+        border-top-width: 1px;
+        color: inherit;
+        height: 0;
+      }
+      abbr:where([title]) {
+        text-decoration: underline dotted;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          Liberation Mono,
+          Courier New,
+          monospace;
+        font-feature-settings: normal;
+        font-size: 1em;
+        font-variation-settings: normal;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      table {
+        border-collapse: collapse;
+        border-color: inherit;
+        text-indent: 0;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        color: inherit;
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-size: 100%;
+        font-variation-settings: inherit;
+        font-weight: inherit;
+        letter-spacing: inherit;
+        line-height: inherit;
+        margin: 0;
+        padding: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      input:where([type="button"]),
+      input:where([type="reset"]),
+      input:where([type="submit"]) {
+        -webkit-appearance: button;
+        background-color: transparent;
+        background-image: none;
+      }
+      :-moz-focusring {
+        outline: auto;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      summary {
+        display: list-item;
+      }
+      blockquote,
+      dd,
+      dl,
+      figure,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      p,
+      pre {
+        margin: 0;
+      }
+      fieldset {
+        margin: 0;
+      }
+      fieldset,
+      legend {
+        padding: 0;
+      }
+      menu,
+      ol,
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      dialog {
+        padding: 0;
+      }
+      textarea {
+        resize: vertical;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        color: #9ca3af;
+        opacity: 1;
+      }
+      [role="button"],
+      button {
+        cursor: pointer;
+      }
+      :disabled {
+        cursor: default;
+      }
+      audio,
+      canvas,
+      embed,
+      iframe,
+      img,
+      object,
+      svg,
+      video {
+        display: block;
+        vertical-align: middle;
+      }
+      img,
+      video {
+        height: auto;
+        max-width: 100%;
+      }
+      [hidden] {
+        display: none;
+      }
+      *,
+      :after,
+      :before {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgba(59, 130, 246, 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      }
+      ::backdrop {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgba(59, 130, 246, 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      }
+      #webcrumbs .absolute {
+        position: absolute;
+      }
+      #webcrumbs .relative {
+        position: relative;
+      }
+      #webcrumbs .left-2 {
+        left: 8px;
+      }
+      #webcrumbs .top-1\/2 {
+        top: 50%;
+      }
+      #webcrumbs .mb-4 {
+        margin-bottom: 16px;
+      }
+      #webcrumbs .flex {
+        display: flex;
+      }
+      #webcrumbs .h-\[40px\] {
+        height: 40px;
+      }
+      #webcrumbs .h-\[50px\] {
+        height: 50px;
+      }
+      #webcrumbs .w-\[40px\] {
+        width: 40px;
+      }
+      #webcrumbs .w-\[50px\] {
+        width: 50px;
+      }
+      #webcrumbs .w-\[700px\] {
+        width: 700px;
+      }
+      #webcrumbs .flex-1 {
+        flex: 1 1 0%;
+      }
+      #webcrumbs .-translate-y-1\/2 {
+        --tw-translate-y: -50%;
+      }
+      #webcrumbs .-translate-y-1\/2,
+      #webcrumbs .transform {
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+          scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      }
+      #webcrumbs .flex-row {
+        flex-direction: row;
+      }
+      #webcrumbs .flex-col {
+        flex-direction: column;
+      }
+      #webcrumbs .items-center {
+        align-items: center;
+      }
+      #webcrumbs .justify-start {
+        justify-content: flex-start;
+      }
+      #webcrumbs .justify-center {
+        justify-content: center;
+      }
+      #webcrumbs .justify-between {
+        justify-content: space-between;
+      }
+      #webcrumbs .gap-4 {
+        gap: 16px;
+      }
+      #webcrumbs .gap-6 {
+        gap: 24px;
+      }
+      #webcrumbs .overflow-x-auto {
+        overflow-x: auto;
+      }
+      #webcrumbs .whitespace-nowrap {
+        white-space: nowrap;
+      }
+      #webcrumbs .rounded-full {
+        border-radius: 9999px;
+      }
+      #webcrumbs .rounded-lg {
+        border-radius: 24px;
+      }
+      #webcrumbs .rounded-md {
+        border-radius: 18px;
+      }
+      #webcrumbs .border {
+        border-width: 1px;
+      }
+      #webcrumbs .border-neutral-300 {
+        --tw-border-opacity: 1;
+        border-color: rgb(202 202 202 / var(--tw-border-opacity));
+      }
+      #webcrumbs .bg-neutral-300 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(202 202 202 / var(--tw-bg-opacity));
+      }
+      #webcrumbs .bg-primary-500 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(115 65 255 / var(--tw-bg-opacity));
+      }
+      #webcrumbs .bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+      }
+      #webcrumbs .p-2 {
+        padding: 8px;
+      }
+      #webcrumbs .p-6 {
+        padding: 24px;
+      }
+      #webcrumbs .px-3 {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      #webcrumbs .px-4 {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      #webcrumbs .py-1 {
+        padding-bottom: 4px;
+        padding-top: 4px;
+      }
+      #webcrumbs .py-2 {
+        padding-bottom: 8px;
+        padding-top: 8px;
+      }
+      #webcrumbs .pl-10 {
+        padding-left: 40px;
+      }
+      #webcrumbs .pr-4 {
+        padding-right: 16px;
+      }
+      #webcrumbs .text-neutral-500 {
+        --tw-text-opacity: 1;
+        color: rgb(153 153 153 / var(--tw-text-opacity));
+      }
+      #webcrumbs .text-neutral-950 {
+        --tw-text-opacity: 1;
+        color: rgb(40 40 40 / var(--tw-text-opacity));
+      }
+      #webcrumbs .text-primary-50 {
+        --tw-text-opacity: 1;
+        color: rgb(243 241 255 / var(--tw-text-opacity));
+      }
+      #webcrumbs .shadow {
+        --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+        --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
+          0 1px 2px -1px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      #webcrumbs .transition-colors {
+        transition-duration: 0.15s;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      #webcrumbs .duration-200 {
+        transition-duration: 0.2s;
+      }
+      #webcrumbs {
+        font-family: Open Sans !important;
+        font-size: 16px !important;
+      }
+      #webcrumbs :is(.bg-neutral-300) {
+        color: rgba(0, 0, 0, 0.9) !important;
+      }
+      #webcrumbs :is(.bg-primary-500) {
+        color: hsla(0, 0%, 100%, 0.9) !important;
+      }
+      #webcrumbs .hover\:bg-neutral-400:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(177 177 177 / var(--tw-bg-opacity));
+      }
+      #webcrumbs .hover\:bg-primary-600:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(99 27 255 / var(--tw-bg-opacity));
+      }
+      
+      body {
+        line-height: inherit;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        min-width: 100vw;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #ffffff, #d4d4d4);
+      }
+    </style>
+  </head>
+  <body>
+  <div id="webcrumbs">
+    <div class="w-[700px] bg-white rounded-lg shadow p-6 flex flex-col gap-6"> <header class="flex items-center justify-between mb-4"> <div class="flex items-center gap-4"> <div class="h-[40px] w-[40px] bg-primary-500 rounded-lg"></div> <button class="bg-primary-500 text-primary-50 rounded-md py-1 px-3 hover:bg-primary-600 transition-colors duration-200"> Button A </button> <button class="bg-primary-500 text-primary-50 rounded-md py-1 px-3 hover:bg-primary-600 transition-colors duration-200"> Button B </button> </div> <div class="relative"> <input type="text" class="border border-neutral-300 rounded-md pl-10 pr-4 py-1" placeholder="Search"/> <span class="material-symbols-outlined absolute left-2 top-1/2 transform -translate-y-1/2 text-neutral-500"> search </span> </div> </header> <ul class="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-primary-500 scrollbar-track-neutral-200"> <li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 1 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 2 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 3 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 4 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 5 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 6 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 7 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 8 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 9 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 10 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 11 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 12 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 13 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 14 </button> </li><li> <button class="bg-primary-500 text-primary-50 rounded-full h-[50px] w-[50px] flex items-center justify-center whitespace-nowrap hover:bg-primary-600 transition-colors duration-200"> 15 </button> </li> </ul> <form class="flex flex-col gap-4"> <input type="text" class="border border-neutral-300 rounded-md p-2" placeholder="Input 1"/> <input type="text" class="border border-neutral-300 rounded-md p-2" placeholder="Input 2"/> <div class="flex items-center gap-4"> <input type="text" class="border border-neutral-300 rounded-md p-2 flex-1" placeholder="Input 3"/> <select class="border border-neutral-300 rounded-md px-4 py-2"> <option>Select Option</option> <option>Option 1</option> <option>Option 2</option> <option>Option 3</option> </select> </div> <input type="text" class="border border-neutral-300 rounded-md p-2" placeholder="Input 4"/> <input type="text" class="border border-neutral-300 rounded-md p-2" placeholder="Input 5"/> <input type="text" class="border border-neutral-300 rounded-md p-2" placeholder="Input 6"/> <input type="text" class="border border-neutral-300 rounded-md p-2" placeholder="Input 7"/> <input type="text" class="border border-neutral-300 rounded-md p-2" placeholder="Input 8"/> </form> <div class="flex justify-start gap-4"> <button class="bg-primary-500 text-primary-50 rounded-md py-2 px-4 hover:bg-primary-600 transition-colors duration-200"> Button 1 </button> <button class="bg-neutral-300 text-neutral-950 rounded-md py-2 px-4 hover:bg-neutral-400 transition-colors duration-200"> Button 2 </button> <button class="bg-neutral-300 text-neutral-950 rounded-md py-2 px-4 hover:bg-neutral-400 transition-colors duration-200"> Button 3 </button> </div> </div>
+
+
+  </div>
+  </body>
+</html>
